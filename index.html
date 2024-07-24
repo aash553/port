@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4760d2b4a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="name" alt="Logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="header-container">
+            <p class="role" >Software Engineering</p>
+            <h1>Hi, I am <span>Aashish</span> from Chennai</h1>
+        </div>
+        <div class="image-container">
+            <img src="images/profile.png" alt="Profile">
+        </div>
+        </div>
+    </div>
+<!-- -----------about----------- -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/aashish.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p class="sub-para">Hello! I'm Aashish, a passionate Software Engineer from VIT Vellore with a robust 
+                    background in Computer Science and Engineering.
+                    My journey into the tech world, sparked by curiosity, has led me to specialize in full-stack development,
+                    particularly in Javascript frameworks like React and Node.js.
+                    Looking ahead, I aim to deepen my expertise in Cyber Security and new Software Development Tools, 
+                    exploring their potential to create smarter, more secured systems. 
+                    Thank you for visiting my portfolio – I'm always open to connecting with like-minded professionals and exploring new opportunities. 
+                    Feel free to reach out through the contact section.
+
+                    <div class="tab-titles">
+                        <p class="sub-tabs active-link" onclick="opentab(event,'skills')">Skill</p>
+                        <p class="sub-tabs"onclick="opentab(event,'education')">Education</p>
+                        <p class="sub-tabs"onclick="opentab(event,'experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Desinging Web Applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2005-2020</span><br>School- Chettinad Vidyashram,Chennai</li>
+                            <li><span>2021-CURRENT</span><br>B.TECH - VIT,Vellore</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 Sept-Nov</span><br>Juspay Pvt Ltd</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+   </div>
+   <!-- -----------portfolio----------- -->
+
+   <div id="projects">
+       <h1 class="title">My Projects</h1>
+       <div class="contain">
+        <div class="project-list">
+            <div>
+                <i class="fa-solid fa-brain"></i>
+                <h2>AI/ML</h2>
+                <p>Automatic Speech to Sign Language</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-id-card"></i>
+                <h2>Digital Webcard</h2>
+                <p>Business Card </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-file"></i>
+                <h2>Data File System</h2>
+                <p>Using DSA  and file data handling system</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <!-- <--------- contact --------->
+
+
+<div id="contact">
+    <div class="containerr">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class = "sub-title" >Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>aashishlalith553@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>7200920005</p>
+                <p><i class="fa-solid fa-location-dot"></i>Chennai, Tamil Nadu</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="" class="btn btn2" id="portfolio">Download CV</a>       
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows = "6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2024 All rights reserved | This template is made with
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-js"></i>
+            by Aashish<a href=""></a>
+            </p>
+    </div>
+</div>
+
+
+
+
+   <!-- <---------------projects--------------> 
+
+   <script>
+    function opentab(event, tabname) {
+        const tablinks = document.querySelectorAll(".sub-tabs");
+        const tabcontents = document.querySelectorAll(".tab-contents");
+
+        tablinks.forEach(tablink => {
+            tablink.classList.remove("active-link");
+        });
+
+        
+        tabcontents.forEach(tabcontent => {
+            tabcontent.classList.remove("active-tab");
+        });
+
+        
+        event.currentTarget.classList.add("active-link");
+
+       
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwhow8WSHCN37N9O8TYQmUAh0h1QSI0lMywWOu_IXiHaN56u9rKLmoXNiUkA2ZiJ4k/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Thank you for your message. We will get back to you soon."
+            setTimeout(function(){
+                msg.innerHTML= ""
+            },2000)
+            form.reset();
+    })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
